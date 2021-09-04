@@ -1,0 +1,120 @@
+Truffle v5.3.6 (core: 5.3.6)
+Node v14.17.0
+ ~/Desktop/Uniswap/v2/pancake-swap-core-1/ [master*] truffle deploy --network bscTestnet
+
+Compiling your contracts...
+===========================
+> Compiling ./contracts/Migration.sol
+> Compiling ./contracts/PancakeERC20.sol
+> Compiling ./contracts/PancakeFactory.sol
+> Compiling ./contracts/PancakePair.sol
+> Compiling ./contracts/WBNB.sol
+> Compiling ./contracts/interfaces/IERC20.sol
+> Compiling ./contracts/interfaces/IPancakeCallee.sol
+> Compiling ./contracts/interfaces/IPancakeERC20.sol
+> Compiling ./contracts/interfaces/IPancakeFactory.sol
+> Compiling ./contracts/interfaces/IPancakePair.sol
+> Compiling ./contracts/libraries/Math.sol
+> Compiling ./contracts/libraries/SafeMath.sol
+> Compiling ./contracts/libraries/UQ112x112.sol
+> Compiling ./contracts/test/ERC20.sol
+> Artifacts written to /Users/dr.lee/Desktop/Uniswap/v2/pancake-swap-core-1/build/contracts
+> Compiled successfully using:
+   - solc: 0.5.16+commit.9c3226ce.Emscripten.clang
+
+
+
+Starting migrations...
+======================
+> Network name:    'bscTestnet'
+> Network id:      97
+> Block gas limit: 30000000 (0x1c9c380)
+
+
+1_initial_migration.js
+======================
+
+   Deploying 'Migrations'
+   ----------------------
+   > transaction hash:    0x3028fd5f702fed6560a3a3fa388537317dc75f422fc32436b5db7b4f72cb2eea
+   > Blocks: 1            Seconds: 4
+   > contract address:    0xB5895C3D1bCad9c889EEfd1c5d9739b03231B36f
+   > block number:        12065843
+   > block timestamp:     1630737234
+   > account:             0x4b7b6fA91148ADcD31b6999AC2DC85694ac05803
+   > balance:             1.42997369
+   > gas used:            128970 (0x1f7ca)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.0012897 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:           0.0012897 ETH
+
+
+2_deploy_factory.js
+===================
+
+   Deploying 'PancakeFactory'
+   --------------------------
+   > transaction hash:    0x328d8238cc056d8961077a3458172cb755d639180ee9501615420b9cf561e12f
+   > Blocks: 3            Seconds: 8
+   > contract address:    0x4969edE116216F468d2452BBe4F1Ea95bc77506F
+   > block number:        12065850
+   > block timestamp:     1630737255
+   > account:             0x4b7b6fA91148ADcD31b6999AC2DC85694ac05803
+   > balance:             1.40517283
+   > gas used:            2437820 (0x2532bc)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.0243782 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:           0.0243782 ETH
+
+
+3_deploy_wbnb.js
+================
+
+   Deploying 'WBNB'
+   ----------------
+   > transaction hash:    0x3fdcf4eed540a5671b10f26efc7b9ed8dcde979e42f51a75f5883d002d30483b
+   > Blocks: 1            Seconds: 4
+   > contract address:    0x354e23e88F4AE941A561688e7168B23B65956864
+   > block number:        12065856
+   > block timestamp:     1630737273
+   > account:             0x4b7b6fA91148ADcD31b6999AC2DC85694ac05803
+   > balance:             1.39988994
+   > gas used:            501023 (0x7a51f)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00501023 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.00501023 ETH
+
+
+Summary
+=======
+> Total deployments:   3
+
+
+truffle run verify PancakeFactory --network bscTestnet
+Verifying PancakeFactory
+Pass - Verified: https://testnet.bscscan.com/address/0x4969edE116216F468d2452BBe4F1Ea95bc77506F#contracts
+Successfully verified 1 contract(s).
+
+
+
+Verifying WBNB
+Pass - Verified: https://testnet.bscscan.com/address/0x354e23e88F4AE941A561688e7168B23B65956864#contracts
+Successfully verified 1 contract(s).
